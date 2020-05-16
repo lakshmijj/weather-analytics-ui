@@ -15,17 +15,13 @@ export class AnalyticsListComponent implements OnInit {
   ngOnInit() {
      this.apiService.filters$.subscribe(values => {
        this.dailyWeather = []
-       if(values.latitude && values.logitude){    
-         if(!values.duration) values.duration = 0;           
+       if(values.latitude && values.logitude){   
          this.searchWeather(values.latitude, values.logitude, values.duration);
        }
      })
   }
 
-  searchWeather(lat, long, duration){  
-    console.log(lat);
-    console.log(long);
-    console.log(duration);
+  searchWeather(lat, long, duration){     
     this.timestampDuration.forEach((val, k) => {
       if(k <= duration){
         this.apiService.getWeatherUpdate(lat, long, val).subscribe(response => {

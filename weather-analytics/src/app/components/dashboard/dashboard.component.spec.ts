@@ -5,6 +5,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AnalyticsComponent } from '../analytics/analytics.component';
+import { AnalyticsMapComponent } from '../analytics-map/analytics-map.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -12,7 +13,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent, AnalyticsComponent ],
+      declarations: [ DashboardComponent, AnalyticsComponent, AnalyticsMapComponent ],
       providers: [ApiService],
       imports: [HttpClientModule, ReactiveFormsModule]  
     })

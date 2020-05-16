@@ -14,7 +14,6 @@ export class ApiService {
     this.filters$.next(filters);
   }
   getWeatherUpdate(latitude, logitude, timestamp){
-    
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     const apiUrl = 'https://api.darksky.net/forecast/0b67f8f549800f7bdeccc85500ba9324';
           

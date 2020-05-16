@@ -32,16 +32,16 @@
        {{item[0].summary}}
    </div>
    <div class="col">
-    {{item[0].sunriseTime | date: 'dd/mm/yyyy'}}
+    {{item[0].time | date: 'dd/mm/yyyy'}}
   </div>
   <div class="col">
-    {{item[0].sunsetTime | date: 'HH:MM'}}
+    {{item[0].time | date: 'h: mm'}}
   </div>
   <div class="col">
-    {{item[0].time | date: 'HH:MM'}}
+    {{item[0].sunriseTime | date: 'h: mm'}}
   </div>
    <div class="col">
-    {{item[0].time | date: 'HH:MM'}}
+    {{item[0].sunsetTime | date: 'h: mm'}}
   </div>
   <div class="col">
     {{item[0].temperatureMax}}
@@ -50,9 +50,9 @@
     {{item[0].temperatureMin}}
   </div>
   <div class="col">
-    {{item[0].temperatureHighTime | date: 'HH:MM'}}
+    {{item[0].temperatureHighTime | date: 'h: mm'}}
   </div>
   <div class="col">
-    {{item[0].temperatureMinTime | date: 'HH:MM'}}
+    {{item[0].temperatureLowTime | date: 'h: mm'}}
   </div>
 </div>

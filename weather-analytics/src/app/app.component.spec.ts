@@ -2,12 +2,14 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ApiService } from './services/api.service';
+import { AgmCoreModule } from '@agm/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        AgmCoreModule
       ],
       declarations: [
         AppComponent
