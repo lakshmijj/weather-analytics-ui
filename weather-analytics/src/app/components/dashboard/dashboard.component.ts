@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
       logitude: '',
       duration : ''
   });
+  showMap = false;
   constructor(private fb: FormBuilder, private apiService: ApiService) { }
 
   ngOnInit() {
@@ -29,7 +30,7 @@ export class DashboardComponent implements OnInit {
     //   });  
   }  
   search(){
-
+    this.showMap = true;
     this.apiService.filters(this.searchForm.value);
   }
 }

@@ -26,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'CHAVES_GOOGLE_MAPS'
+      apiKey: 'AIzaSyBh4xMx11q_vGvZI4tajHEkTNSQZjbBRqw'
     })
   ],
   providers: [{
