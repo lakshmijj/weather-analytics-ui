@@ -29,4 +29,8 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call filter service', () => {
+    const service: ApiService = TestBed.get(ApiService);
+    expect(service.filters).toHaveBeenCalled();
+  });
 });

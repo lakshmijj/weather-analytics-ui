@@ -26,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBh4xMx11q_vGvZI4tajHEkTNSQZjbBRqw'
+      apiKey: ''
     })
   ],
   providers: [{

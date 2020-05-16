@@ -25,7 +25,9 @@ export class AnalyticsListComponent implements OnInit {
     this.timestampDuration.forEach((val, k) => {
       if(k <= duration){
         this.apiService.getWeatherUpdate(lat, long, val).subscribe(response => {
-          this.dailyWeather.push(response['daily']['data']);
+          if(response && response['daily']){
+            this.dailyWeather.push(response['daily']['data']);
+          }
         });
       }
     });

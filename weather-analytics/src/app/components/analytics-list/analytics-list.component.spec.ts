@@ -26,4 +26,7 @@ describe('AnalyticsListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('Initialize data', () => {
+    expect(component.dailyWeather).toEqual([]);
+  });
 });

@@ -9,4 +9,8 @@ describe('ApiService', () => {
     const service: ApiService = TestBed.get(ApiService);
     //expect(service).toBeTruthy();
   });
+  it('#getWeatherUpdate should return real value', () => {
+    const service: ApiService = TestBed.get(ApiService);
+    expect(service.getWeatherUpdate('32','-42', 1431793732)).toBeTruthy();
+  });
 });
