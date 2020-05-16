@@ -1,0 +1,58 @@
+<div class="row col-header mt-4" *ngIf="dailyWeather.length">
+    <div class="col">
+        Summary
+    </div>
+    <div class="col">
+        Date
+      </div>
+    <div class="col">
+     Time
+   </div>
+   <div class="col">
+    Sun Rise
+  </div>
+  <div class="col">
+    Sun Set
+  </div>
+   <div class="col">
+     Temp. High
+   </div>
+   <div class="col">
+     Temp. Low
+   </div>
+   <div class="col">
+     Temp. High Time
+   </div>
+   <div class="col">
+     Temp. Low Time
+   </div>
+</div>
+<div class="row" *ngFor="let item of dailyWeather">
+   <div class="col">
+       {{item[0].summary}}
+   </div>
+   <div class="col">
+    {{item[0].sunriseTime | date: 'dd/mm/yyyy'}}
+  </div>
+  <div class="col">
+    {{item[0].sunsetTime | date: 'HH:MM'}}
+  </div>
+  <div class="col">
+    {{item[0].time | date: 'HH:MM'}}
+  </div>
+   <div class="col">
+    {{item[0].time | date: 'HH:MM'}}
+  </div>
+  <div class="col">
+    {{item[0].temperatureMax}}
+  </div>
+  <div class="col">
+    {{item[0].temperatureMin}}
+  </div>
+  <div class="col">
+    {{item[0].temperatureHighTime | date: 'HH:MM'}}
+  </div>
+  <div class="col">
+    {{item[0].temperatureMinTime | date: 'HH:MM'}}
+  </div>
+</div>

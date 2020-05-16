@@ -1,0 +1,37 @@
+
+<div class="row mt-4 mb-2">
+   <div class="col p-title">
+     Weather Info
+   </div>
+</div>
+<div class="row card">
+<form [formGroup]="searchForm" data-testid="search-form">
+   
+      <div class="col-8 mt-4">
+         <div class="row mt-4">
+            <div class="col form-group">
+               <label for="latitude" class="mr-1 control-label">Latitude</label>
+                  <input type="number" name="latitude" min="-180" max="180" formControlName="latitude">          
+             </div>
+             <div class="col form-group">
+                <label for="longtitude" class="mr-1 control-label">Logitude</label>
+                <input type="number" name="longtitude" min="-180" max="180" formControlName="logitude">
+             </div>
+             <div class="col form-group">
+                <label for="duration" class="mr-1 control-label">Duration(years)</label>
+                <input type="number" name="duration" min="0" max="5" formControlName="duration">
+             </div>
+             <div class="col form-group">
+                <button class="btn btn-secondary" (click)="search()">Search</button>
+            </div>
+         </div>       
+      </div>
+    
+</form>
+</div>
+<div class="row card">
+  <app-analytics-list></app-analytics-list>
+</div>
+<div class="row card">
+   <app-analytics-map></app-analytics-map>
+</div>
